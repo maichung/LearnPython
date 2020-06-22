@@ -1,0 +1,17 @@
+Tạo Project mới: Terminal -> Django-admin startproject  <Tên Project>
+Tạo Webapp: Python3 manage.py startapp <Tên App>
+  Khai báo app mới: Settings.py -> INSTALLED_APPS -> '<Tên App>'
+  Cập nhật Settings.py -> python3 manage.py migrate
+  Tạo Url: Urls.py -> from django.contrib import admin
+                      from django.urls import path, include
+                      urlpatterns = [
+                         path('admin/', admin.site.urls),
+                         path('home', include('home.urls')),
+                      ]
+Tạo tài khoảm admin để truy cập hệ thống Admin
+Bây giờ Kteam sẽ tạo một tài khoản admin để truy cập vào hệ thống, ta sẽ mở terminal vào gõ lệnh:
+
+python manage.py createsuperuser
+1
+Sau khi nhập lệnh, hệ thống yêu cầu thông tin tài khoản admin, bạn hay nhập username, email và password để khởi tạo:
+
